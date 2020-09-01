@@ -1,0 +1,75 @@
+a {
+    text-decoration: none;
+    color: rgb(92, 92, 92)
+}
+.dashboard {
+    background: #FAFAFA 0% 0% no-repeat padding-box;
+    display: flex;
+}
+
+.content {
+    width:100%;
+}
+.top_heading {
+    display:flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.heading {
+    padding-left: 30px
+}
+.side_items {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.side_items > div{
+    margin-right: 20px;
+}
+.search, .cal {
+    width:20px;
+    height:20px;
+    border-radius: 100%;
+    padding:10px;
+    background-color: rgb(230, 227, 227);
+}
+.middle_heading {
+    text-align:left;
+}
+.row {
+    width:100%;
+    background : #FFFFFF 0% 0% no-repeat padding-box;
+    height:30px;
+    color:rgb(110, 110, 110)
+}
+.alignment {
+    padding-left: 30px;
+    text-align: left;
+}
+table {
+    width:100%;
+    font-size: small;
+}
+thead > small {
+    color: black
+}
+.progress_bar{
+    border: 1px solid rgb(201, 201, 201);
+    border-radius: 30px;
+    width:100px;
+    height:5px;
+    margin-left: 10px;
+}
+.bar_percent {
+    height: 100%;
+    background-color: rgb(123, 198, 228);
+}
+.progress{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.panel_div{
+    padding: 5px 25px;
+}

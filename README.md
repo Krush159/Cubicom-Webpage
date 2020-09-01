@@ -1,6 +1,10 @@
 # Cubicom-Webpage
 
-### Run the application by typing "npm start" in the terminal
+### Steps for executing the app
+  * You have to  clone the repositry https://github.com/Krush159/Cubicom-Webpage.git
+  * Run "npm install"
+  * Run "npm start"
+  * Login Credentials: username: "cubicom" , password: "password"
 
 
 ### Completed: 

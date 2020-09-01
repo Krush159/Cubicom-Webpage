@@ -17,19 +17,21 @@ class Login extends Component {
     handleSubmit = async (e) => {
         e.preventDefault()
         let { username, password } = this.state
-        let userInfo = { username, password }
+        let userInfo = { username, password, grant_type: 'password' }
         console.log(userInfo)
         this.props.loginSuccess(userInfo)
         // const url = "https://api-stage.kyte.app/network-app/oauth/token"
         // const options = {
         //     method: 'POST',
-        //     headers: { 'content-type': 'application/x-www-form-urlencoded' },
+        //     headers: { 'Content-type': 'application/x-www-form-urlencoded' },
         //     data: qs.stringify(userInfo),
+        //     auth: {
+        //         username: 'cubicom',
+        //         password: 'password',
+        //     },
         //     url,
         //   };
-
-
-        // return await axios(options)
+        // return await axios (options)
         //     .then(res => this.props.loginSuccess(res))
         //     .catch(err => this.props.loginFailure(err))
     }

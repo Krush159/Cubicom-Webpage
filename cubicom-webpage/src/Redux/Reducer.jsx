@@ -2,10 +2,10 @@
 import { LOGIN_REQUEST, LOGIN_SUCCESS, LOGIN_FAILURE, OPEN_SIDEBAR,CLOSE_SIDEBAR } from './ActionTypes'
 
 const initState = {
-    isAuth: true,
+    isAuth: false,
     loggingIn: false,
-    userEmail: "",
-    userName: "",
+    password: "",
+    username: "",
     open: true
 
 }
@@ -19,12 +19,16 @@ const authReducer = (state = initState, action) => {
                 loggingIn: true
             }
         case LOGIN_SUCCESS:
-            alert("Login Successful")
-            return {
-                ...state,
-                isAuth: true,
-                loggingIn: false
+            console.log(action.payload)
+            if (action.payload.username === "cubicom" && action.payload.password === "password") {
+                console.log("yes")
+                return {
+                    ...state,
+                    isAuth: true,
+                    loggingIn: false
+                }
             }
+            
         case LOGIN_FAILURE:
             alert(action.payload)
             return {

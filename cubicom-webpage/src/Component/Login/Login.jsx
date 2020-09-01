@@ -19,20 +19,19 @@ class Login extends Component {
         let { username, password } = this.state
         let userInfo = { username, password }
         console.log(userInfo)
-        // this.props.loginRequest()
-        const url = "https://api-stage.kyte.app/network-app/oauth/token"
-        const options = {
-            method: 'POST',
-            headers: { 'content-type': 'application/x-www-form-urlencoded' },
-            data: qs.stringify(userInfo),
-            url,
-          };
-          
+        this.props.loginSuccess(userInfo)
+        // const url = "https://api-stage.kyte.app/network-app/oauth/token"
+        // const options = {
+        //     method: 'POST',
+        //     headers: { 'content-type': 'application/x-www-form-urlencoded' },
+        //     data: qs.stringify(userInfo),
+        //     url,
+        //   };
 
-        return await axios(options)
-            .then(res => console.log(res))
-            .catch(err => this.props.loginFailure(err))
 
+        // return await axios(options)
+        //     .then(res => this.props.loginSuccess(res))
+        //     .catch(err => this.props.loginFailure(err))
     }
     handleChange = (e) => {
         this.setState({
@@ -43,6 +42,7 @@ class Login extends Component {
 
     render() {
         const { isAuth } = this.props
+        console.log(isAuth)
         return (
             <div>
                 {isAuth ? (
@@ -88,11 +88,12 @@ class Login extends Component {
                                             <small>Forgot password?</small>
                                         </div>
                                     </div>
-                                    <button className={styles.login_button}>Login</button>
+                                    <button type="submit" className={styles.login_button}>Login</button>
                                 </form>
                             </div>
                         </div>
-                    )}
+                    )
+                }
             </div>
         )
     }
